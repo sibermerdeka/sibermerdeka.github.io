@@ -1,100 +1,183 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>sibermerdeka!</title>
+        <link
+            href="../css/style.css"
+            rel="stylesheet"
+            type="text/css"
+            media="all"
+        />
+        <link rel="icon" type="image/png" href="../icon-c.svg" />
+        <script>
+            localStorage.setItem("preferredLang", "en");
+            function switchLanguage(lang) {
+                localStorage.setItem("preferredLang", lang);
+                window.location.href = `/${lang}/`;
+            }
+        </script>
+    </head>
 
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>sibermerdeka!</title>
-   <link href="../css/style.css" rel="stylesheet" type="text/css" media="all">
-   <link rel="icon" type="image/png" href="../icon-c.svg" />
-   <script>
-      localStorage.setItem('preferredLang', 'en');
-      function switchLanguage(lang) {
-         localStorage.setItem('preferredLang', lang);
-         window.location.href = `/${lang}/`;
-      }
-   </script>
-</head>
-
-<body class="scroll">
-   <div id="container">
-      <div id="header">
-         <h1 class="title">sibermerdeka - the tropical cyberspace!</h1>
-      </div>
-      <div class="navbar">
-         <ul>
-            <li>
-               <a href="/">Main Page</a>
-            </li>
-            <li>
-               <a href="https://public-wiki-sm.blahaj.my">Wiki↪</a>
-            </li>
-            <li>
-               <a href="#" onclick="switchLanguage('en')"><u>EN</u></a> / <a href="#" onclick="switchLanguage('ms')">BM</a>
-            </li>
-         </ul>
-      </div>
-      <div class="wrapper">
-         <div id="left-sidebar">
-            <div class="section-title">News</div>
-            <div class="content">
-               <p><b>2026-08-09: Upcoming Open Day Event</b></p>
-               <p>2026-06-21: Second move to new physical space (upstairs)</p>
-               <p>2025-03-15: The physical space opens to the general public!</p>
-               <p>2024-12-26: Formed an assembly as a delegation to <a href="https://en.wikipedia.org/wiki/Chaos_Communication_Congress">CCC</a></p>
-               <p>2024-11-15: First move into our physical space</p>
-               <p>2024-07-13: The hackerspace group is established</p>
+    <body class="scroll">
+        <div id="container">
+            <div id="header">
+                <h1 class="title">sibermerdeka - the tropical cyberspace!</h1>
             </div>
-         </div>
-         <div class="main-content">
-            <div class="section-title">Main Page</div>
-            <div class="content">
-               <p>Welcome to sibermerdeka! Here is where the world of the virtual meets the real, and here you can
-                  meet others who are interested in the cyber too...</p>
-               <p>We are a hackerspace based in Pudu, Kuala Lumpur. Members meet every week on Tuesday night at our hackerspace,
-                  but we are available most days. We talk about various topics within this cyber era, among them:</p>
-
-               <ul class="list">
-                  <li>Computer networks and the World Wide Web</li>
-                  <li>Computers and their power and potential to influence society</li>
-                  <li>Public and private data safety and privacy and its place in our lives. </li>
-               </ul>
-
-               <p>On top of this, we have some facilities for use including:</p>
-
-               <ul class="list">
-                  <li>1 Gbps internet for use :D </li>
-                  <li>Computers, monitors, and a printrr for messing around with!</li>
-                  <li>Soldering irons and electronic equipment for working on your own projects!</li>
-                  <li>Communal DJ controller (Pioneer DDJ 400) to mess around or test for your sets</li>
-                  <li>Soundsystem (Speakers across two floors + channel balancer w/ mic input)</li>
-                  <li>Game consoles (Switch, PS1, PS2) and boardgames</li>
-                  <li>Kitchen (induction stove, air fryer, water filter)</li>
-                  <li>Shower with a heater!</li>
-                  <li>Lounge for kicking back and relaxing in</li>
-                  <li>Fancy rooftop access with a skyline of KL</li>
-
-               </ul>
-
-               <p>Interested? We are based on the 4th floor of the shoplot at 392C, Jalan Pudu, and share physical space with Petra Pudu Rooftop Cafe. We are across the road from Pudu LRT station on the Ampang / Sri Petaling Lines.</p>
-
-               <p>For more information, contact us at <a href="mailto:hello@sibermerdeka.net">hello (at) sibermerdeka.net</a>, or message us at <a href="https://www.instagram.com/sibermerdeka">Instagram</a>.
-               </p>
-
+            <div class="navbar">
+                <ul>
+                    <li>
+                        <a href="/">Main Page</a>
+                    </li>
+                    <li>
+                        <a href="https://public-wiki-sm.blahaj.my">Wiki↪</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="switchLanguage('en')"><u>EN</u></a>
+                        / <a href="#" onclick="switchLanguage('ms')">BM</a>
+                    </li>
+                    <li>
+                        <a href="/calendar">Calendar</a>
+                    </li>
+                </ul>
             </div>
-         </div>
-         <div id="right-sidebar">
-            <div class="section-title">Heading</div>
-            <div class="content">
-               <p></p>
+            <div class="wrapper">
+                <div id="left-sidebar">
+                    <div class="section-title">News</div>
+                    <div class="content">
+                        <p><b>2026-08-09: Upcoming Open Day Event</b></p>
+                        <p>
+                            2026-06-21: Second move to new physical space
+                            (upstairs)
+                        </p>
+                        <p>
+                            2025-03-15: The physical space opens to the general
+                            public!
+                        </p>
+                        <p>
+                            2024-12-26: Formed an assembly as a delegation to
+                            <a
+                                href="https://en.wikipedia.org/wiki/Chaos_Communication_Congress"
+                                >CCC</a
+                            >
+                        </p>
+                        <p>2024-11-15: First move into our physical space</p>
+                        <p>2024-07-13: The hackerspace group is established</p>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <div class="section-title">Main Page</div>
+                    <div class="content">
+                        <p>
+                            Welcome to sibermerdeka! Here is where the world of
+                            the virtual meets the real, and here you can meet
+                            others who are interested in the cyber too...
+                        </p>
+                        <p>
+                            We are a hackerspace based in Pudu, Kuala Lumpur.
+                            Members meet every week on Tuesday night at our
+                            hackerspace, but we are available most days. We talk
+                            about various topics within this cyber era, among
+                            them:
+                        </p>
+
+                        <ul class="list">
+                            <li>Computer networks and the World Wide Web</li>
+                            <li>
+                                Computers and their power and potential to
+                                influence society
+                            </li>
+                            <li>
+                                Public and private data safety and privacy and
+                                its place in our lives.
+                            </li>
+                        </ul>
+
+                        <p>
+                            On top of this, we have some facilities for use
+                            including:
+                        </p>
+
+                        <ul class="list">
+                            <li>1 Gbps internet for use :D</li>
+                            <li>
+                                Computers, monitors, and a printrr for messing
+                                around with!
+                            </li>
+                            <li>
+                                Soldering irons and electronic equipment for
+                                working on your own projects!
+                            </li>
+                            <li>
+                                Communal DJ controller (Pioneer DDJ 400) to mess
+                                around or test for your sets
+                            </li>
+                            <li>
+                                Soundsystem (Speakers across two floors +
+                                channel balancer w/ mic input)
+                            </li>
+                            <li>
+                                Game consoles (Switch, PS1, PS2) and boardgames
+                            </li>
+                            <li>
+                                Kitchen (induction stove, air fryer, water
+                                filter)
+                            </li>
+                            <li>Shower with a heater!</li>
+                            <li>Lounge for kicking back and relaxing in</li>
+                            <li>Fancy rooftop access with a skyline of KL</li>
+                        </ul>
+
+                        <p>
+                            Interested? We are based on the 4th floor of the
+                            shoplot at 392C, Jalan Pudu, and share physical
+                            space with Petra Pudu Rooftop Cafe. We are across
+                            the road from Pudu LRT station on the Ampang / Sri
+                            Petaling Lines.
+                        </p>
+
+                        <p>
+                            For more information, contact us at
+                            <a href="mailto:hello@sibermerdeka.net"
+                                >hello (at) sibermerdeka.net</a
+                            >, or message us at
+                            <a href="https://www.instagram.com/sibermerdeka"
+                                >Instagram</a
+                            >.
+                        </p>
+                    </div>
+                </div>
+                <iframe
+                    id="open-web-calendar"
+                    style="
+                        background: url(&quot;https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/static/img/loaders/circular-loader.gif&quot;)
+                            center center no-repeat;
+                    "
+                    src="https://open-web-calendar.hosted.quelltext.eu/calendar.html?menu_shows_calendar_visibility_toggle=true&amp;skin=flat&amp;style-event-status-cancelled=true&amp;style-event-status-confirmed=true&amp;style-event-status-tentative=true&amp;target=_blank&amp;title=Sibermerdeka%20Events&amp;url=fernet%3A%2F%2FgAAAAABqxkvD7h5mX1R-dkuz3oyAftPsFP4yQ_ooRL_Q9bItKlHqrRLVbNl7pwKEAUAAT8gqHjXi5exUwaykgO5TSbSQHvjg3rzXflwaGmjTvEmbUCNzbheKv8kExA8r9LJsFjQXGpBFsZpGRuvaIV3n1VVIESM2TA6qJPQUsmBKdUbOwvg6EOZbmgZlQuP7Dgawca0yANnaaj3hcHipKVMeH7qZwtFjKghh4TRefEnRi_5AasYr_HC_-80vT1w4MVTzoyqVp6XxVo9YQsK71U2CA3xhQx2kQQihVvUtELycUkPz6bnBjvNYSkg9hFf3x1-0prfsq40CBe-OmJTpojzhsaYyzcATpWp-lTmlAfTphdhzfyy9HqLPEfU9fDp_OwDgCzUQW7YpKlqblSJriTO3UnKpDE7BMqFhNWOZ69VJEtGBU-w6YbiV9759h3iEPZoPb4gl0mmEWlzXzD9TOTIx2j4EqPgrJE5FihspeDKLZK8HM5uctNGMiC8pcwCBG9b2RycZSmJ2"
+                    sandbox="allow-scripts allow-same-origin allow-popups allow-downloads allow-popups-to-escape-sandbox"
+                    allowTransparency="true"
+                    scrolling="no"
+                    frameborder="0.1"
+                    height="800px"
+                    width="100%"
+                ></iframe>
+                <div id="right-sidebar">
+                    <div class="section-title">Heading</div>
+                    <div class="content">
+                        <p></p>
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-   </div>
+        </div>
 
-   <div id="footer">
-      <p>© Layout by <a href="https://neothemes.neocities.org/" target="_blank">NeoThemes</a></p>
-   </div>
-</body>
-
+        <div id="footer">
+            <p>
+                © Layout by
+                <a href="https://neothemes.neocities.org/" target="_blank"
+                    >NeoThemes</a
+                >
+            </p>
+        </div>
+    </body>
 </html>
